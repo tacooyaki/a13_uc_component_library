@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
 export interface CardProps {
-    children: React.ReactNode;
-    disabled?: boolean;
+  children: React.ReactNode;
+  disabled?: boolean;
 }

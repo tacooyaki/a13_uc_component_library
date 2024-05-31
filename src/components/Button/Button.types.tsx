@@ -1,5 +1,5 @@
 export interface ButtonProps {
-    disabled?: boolean;
-    label: string;
-    onClick?: () => void;
+  disabled?: boolean;
+  label: string;
+  onClick?: () => void;
 }

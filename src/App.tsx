@@ -23,58 +23,64 @@ function App() {
   };
 
   return (
-      <div className="App">
-        <header className="App-header">
-          <h2>Welcome to My Component Library</h2>
+    <div className="App">
+      <header className="App-header">
+        <h2>Welcome to My Component Library</h2>
 
-          <Button label="Click Me!" onClick={() => alert('Button clicked!')} />
+        <Button label="Click Me!" onClick={() => alert('Button clicked!')} />
 
-          <Card>
-            <h2>Card Title</h2>
-            <p>This App was made with React and Storybook.</p>
-          </Card>
+        <Card>
+          <h2>Card Title</h2>
+          <p>This App was made with React and Storybook.</p>
+        </Card>
 
-          <Dropdown
-              options={[
-                { value: 'option1', label: 'Option 1' },
-                { value: 'option2', label: 'Option 2' },
-                { value: 'option3', label: 'Option 3' }
-              ]}
-              onChange={handleDropdownChange}
-          />
+        <Dropdown
+          options={[
+            { value: 'option1', label: 'Option 1' },
+            { value: 'option2', label: 'Option 2' },
+            { value: 'option3', label: 'Option 3' },
+          ]}
+          onChange={handleDropdownChange}
+        />
 
-          <HeroImage bgImage="https://placehold.jp/50/20451c/ffffff/500x500.png" text="The Hero Section" />
+        <HeroImage
+          bgImage="https://placehold.jp/50/20451c/ffffff/500x500.png"
+          text="The Hero Section"
+        />
 
-          <Label>Sample Label</Label>
+        <Label>Sample Label</Label>
 
-          <RadioButton
-              name="Example 1"
-              value="option1"
-              label="Option 1"
-              checked={radioValue === 'option1'}
-              onChange={handleRadioChange}
-          />
+        <RadioButton
+          name="Example 1"
+          value="option1"
+          label="Option 1"
+          checked={radioValue === 'option1'}
+          onChange={handleRadioChange}
+        />
 
-          <Img src="https://placehold.jp/20/20451c/ffffff/150x150.png" alt="Sample" />
+        <Img
+          src="https://placehold.jp/20/20451c/ffffff/150x150.png"
+          alt="Sample"
+        />
 
-          <Table>
-            <thead>
+        <Table>
+          <thead>
             <tr>
               <th>Header 1</th>
               <th>Header 2</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             <tr>
               <td>Data 1</td>
               <td>Data 2</td>
             </tr>
-            </tbody>
-          </Table>
+          </tbody>
+        </Table>
 
-          <Text content="Example Text" />
-        </header>
-      </div>
+        <Text content="Example Text" />
+      </header>
+    </div>
   );
 }
 

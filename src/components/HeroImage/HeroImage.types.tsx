@@ -1,5 +1,5 @@
 export interface HeroImageProps {
-    bgImage: string;
-    text: string;
-    disabled?: boolean;
+  bgImage: string;
+  text: string;
+  disabled?: boolean;
 }
