@@ -3,6 +3,9 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import RadioButton from './RadioButton';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const noOp = () => {};
+
 describe('RadioButton Component', () => {
   test('it should be visible', () => {
     render(
@@ -10,10 +13,8 @@ describe('RadioButton Component', () => {
         label="Option 1"
         name="testRadio"
         checked={false}
-        onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
-          throw new Error('Function not implemented.');
-        }}
-        value={''}
+        onChange={noOp}
+        value=""
       />
     );
     const radioButton = screen.getByLabelText('Option 1');
@@ -27,10 +28,8 @@ describe('RadioButton Component', () => {
         name="testRadio"
         disabled
         checked={false}
-        onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
-          throw new Error('Function not implemented.');
-        }}
-        value={''}
+        onChange={noOp}
+        value=""
       />
     );
     const radioButton = screen.getByLabelText('Option 1');

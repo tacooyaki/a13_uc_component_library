@@ -11,16 +11,19 @@ import Table from './components/Table/Table';
 import Text from './components/Text/Text';
 
 function App() {
-  const [selectedOption, setSelectedOption] = useState<string>('');
+  // const [selectedOption, setSelectedOption] = useState<string>('');
   const [radioValue, setRadioValue] = useState<string>('option1');
 
-  const handleDropdownChange = (value: string) => {
-    setSelectedOption(value);
-  };
+  // const handleDropdownChange = (value: string) => {
+  //   setSelectedOption(value);
+  // };
 
   const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setRadioValue(event.target.value);
   };
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  const noOp = () => {};
 
   return (
     <div className="App">
@@ -40,7 +43,7 @@ function App() {
             { value: 'option2', label: 'Option 2' },
             { value: 'option3', label: 'Option 3' },
           ]}
-          onChange={handleDropdownChange}
+          onChange={noOp}
         />
 
         <HeroImage

@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
-const StyledHero = styled.div<{ bgImage: string; disabled?: boolean }>`
+interface StyledHeroProps {
+  disabled?: boolean;
+}
+
+const StyledHero = styled.div<StyledHeroProps>`
   width: 100%;
   height: 400px;
-  background-image: url(${(props) => props.bgImage});
   background-size: cover;
   background-position: center;
   display: flex;
@@ -20,7 +23,11 @@ const StyledHero = styled.div<{ bgImage: string; disabled?: boolean }>`
 `;
 
 const HeroImage: React.FC<HeroImageProps> = ({ bgImage, text, disabled }) => (
-  <StyledHero bgImage={bgImage} disabled={disabled} data-testid="hero-image">
+  <StyledHero
+    style={{ backgroundImage: `url(${bgImage})` }}
+    disabled={disabled}
+    data-testid="hero-image"
+  >
     {text}
   </StyledHero>
 );
